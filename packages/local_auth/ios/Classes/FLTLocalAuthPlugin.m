@@ -148,11 +148,11 @@
       break;
     case LAErrorTouchIDLockout:
       dispatch_async(dispatch_get_main_queue(), ^{
-       [self alertMessage:arguments[@"lockOut"]
-          firstButton:arguments[@"okButton"]
-         flutterResult:result
-       additionalButton:nil];
-     });
+        [self alertMessage:arguments[@"lockOut"]
+                 firstButton:arguments[@"okButton"]
+               flutterResult:result
+            additionalButton:nil];
+      });
   }
   result([FlutterError errorWithCode:errorCode
                              message:authError.localizedDescription
